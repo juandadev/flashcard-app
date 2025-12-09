@@ -1,6 +1,6 @@
 "use client";
 
-// biome-ignore lint/performance/noNamespaceImport: <explanation>
+// biome-ignore lint/performance/noNamespaceImport: foo
 import * as TabsPrimitive from "@radix-ui/react-tabs";
 import type * as React from "react";
 
@@ -42,7 +42,7 @@ function TabsTrigger({
   return (
     <TabsPrimitive.Trigger
       className={cn(
-        "inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-transparent px-3 py-2.5 font-semibold text-[16px] text-foreground transition-[color,box-shadow] focus-visible:border-ring focus-visible:outline-1 focus-visible:outline-ring focus-visible:ring-[3px] focus-visible:ring-ring/50 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:border-input data-[state=active]:bg-primary data-[state=active]:shadow-sm dark:text-muted-foreground dark:data-[state=active]:bg-input/30 dark:data-[state=active]:text-foreground [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
+        "focus-visible:custom-ring inline-flex h-[calc(100%-1px)] flex-1 items-center justify-center gap-1.5 whitespace-nowrap rounded-full border border-transparent px-3 py-2.5 font-semibold text-[16px] text-foreground transition-colors hover:border-input disabled:pointer-events-none disabled:opacity-50 data-[state=active]:border-input data-[state=active]:bg-primary dark:text-muted-foreground dark:data-[state=active]:bg-input/30 dark:data-[state=active]:text-foreground [&_svg:not([class*='size-'])]:size-4 [&_svg]:pointer-events-none [&_svg]:shrink-0",
         className
       )}
       data-slot="tabs-trigger"
