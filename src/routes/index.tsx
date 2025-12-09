@@ -1,11 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { TabsContent } from "@/components/ui/tabs.tsx";
 
 export const Route = createFileRoute("/")({ component: App });
 
 function App() {
   return (
-    <div>
-      <h1>Flashcard App</h1>
-    </div>
+    <main>
+      <TabsContent value="study">Study</TabsContent>
+      <TabsContent value="all">All</TabsContent>
+    </main>
   );
 }

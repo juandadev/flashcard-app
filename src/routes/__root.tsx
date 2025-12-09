@@ -6,6 +6,8 @@ import {
   Scripts,
 } from "@tanstack/react-router";
 import { TanStackRouterDevtoolsPanel } from "@tanstack/react-router-devtools";
+import Header from "@/components/Header.tsx";
+import { Tabs } from "@/components/ui/tabs.tsx";
 import TanStackQueryDevtools from "../integrations/tanstack-query/devtools";
 import appCss from "../styles.css?url";
 
@@ -45,7 +47,12 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <HeadContent />
       </head>
       <body>
-        {children}
+        <div className="p-4 pb-10">
+          <Tabs defaultValue="study">
+            <Header />
+            {children}
+          </Tabs>
+        </div>
         <TanStackDevtools
           config={{
             position: "bottom-right",
